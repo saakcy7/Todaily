@@ -41,7 +41,9 @@ router.put("/updateTask/:id",async(req,res)=>{
 router.delete("/deleteTask/:id",async(req,res)=>{
     try{
         const {email}=req.body;
-        const existingUser=await User.findOne({email});//checks if the user exists
+        const existingUser=await User.findOneAndUpdate({email},{$pull:{list:req.params.id}}
+
+        );//checks if the user exists
         if(existingUser)
         {
             await List.findByIdAndDelete(req.params.id).then(()=>res.status(200).json({message:"Task deleted"}));
@@ -53,5 +55,18 @@ router.delete("/deleteTask/:id",async(req,res)=>{
 
     }
 });
+
+//getTask
+router.get("/getTasks/:id",async(req,res)=>{
+    try{
+       const list= await List.find({user:req.params.id});
+       res.status(200).json({list:list});
+    }
+    catch(error){
+        console.log(error);
+        res.status(400).json({message:"Internal Server Error"});
+    }
+});
+
 
 module.exports=router;
