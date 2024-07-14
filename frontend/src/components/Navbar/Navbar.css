@@ -5,24 +5,31 @@
 
 .navbar-brand
 {
-    color: #f372ec;
+    color: #f39aa9;
     font-size: 2rem;
 
 }
 
 .btn-nav
 {
-    background-color: #e36edd;
-    border-radius: 20px 12px;
-    border: 1px solid #e96be3;
-    box-shadow:1px 2px 5px #e96be3;
+    background-color: #A0E7E5;
+    border-radius: 18px 12px;
+    border: 1px solid #92dfdc;
+    box-shadow:1px 2px 5px #91e4e1;
     width: 90%;
     color: white !important;
+    font-size: 1.1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.5s;
+    
+    
+
 
 }
 
 .btn-nav:hover
 {
-    background-color: #dd37d4;
+    background-color: #4bc5c1;
     border-radius: 20px 30px;
 }

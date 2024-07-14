@@ -9,6 +9,10 @@
     align-items: flex-start;
     flex-direction: column;
     height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
 
 }
 .home-container h1{
@@ -22,27 +26,26 @@
 }
 
 .btn{
-    background-color: #e36edd;
+    background-color: #84e2df;
     border-radius: 40px;
-    border: 1px solid #e96be3;
-    box-shadow:1px 2px 5px #e96be3;
+    border: 1px solid #92dfdc;
+    box-shadow:1px 2px 5px #91e4e1;
     width: 35%;
     height: 50px;
-    color: white !important;
+    color: rgb(252, 252, 252) !important;
     font-weight: 500;
     font-size: 1.5rem;
     margin-top: 20px;
 }
 .btn:hover{
-    background-color: #dd37d4;
+    background-color: #4bc5c1;
     border-radius: 20px 30px;
 }
 .img{
     margin-left: auto; /* This pushes the image to the right */
-    margin-right: 10px;
+    margin-right: 50px;
     display: block;
-    width: 50%; /* Adjust width as needed */
-    height: 70%;
-    border-radius: 10px 45px;
+    width: 700px; /* Fixed width */
+    height: 600px; /* Fixed height */
 
 }

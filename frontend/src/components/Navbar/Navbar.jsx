@@ -1,12 +1,12 @@
 import React from 'react'
 import './Navbar.css'
-import { FaBook } from "react-icons/fa6";
+import { GoChecklist } from "react-icons/go";
  const Navbar = () => {
     return (
         <div>
 <nav className="navbar navbar-expand-lg">
   <div className="container">
-    <a className="navbar-brand" href="#"><b><FaBook />
+    <a className="navbar-brand" href="#"><b><GoChecklist/> 
     TODAILY</b></a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
