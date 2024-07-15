@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer';
 import About from './components/About/About';
 import Signup from './components/Signup/Signup';
 import SignIn from './components/Signup/SignIn';
+import Todo from './components/todo/Todo';
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path='/about' element={<About/>}/>
         <Route path='/signup' element={<Signup/>}/>
         <Route path='/signin' element={<SignIn/>}/>
+        <Route path='/todo' element={<Todo/>}/>
       </Routes>
    </Router>
     
