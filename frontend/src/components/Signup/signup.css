@@ -1,0 +1,51 @@
+.signup{
+    width: 100%;
+    height: 100vh;
+}
+
+.signup .container .row{
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #f39aa9;
+    border-radius: 10px;
+    background-color: #fddbe1;
+    box-shadow: 1px 2px 5px #f39aa9;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup .container input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px 10px;
+    border: 1px solid #f39aa9;
+    box-shadow: 1px 2px 5px #f39aa9;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.signup .container h1{
+    text-align: center;
+    border-bottom: 1px solid #f39aa9;
+    padding: 5px;
+}
+
+.btn{
+    background-color: rgb(210, 124, 210);
+    color: white;
+    border-radius: 25px 15px 25px;
+    border: 1px solid rgb(214, 101, 214);
+    box-shadow: 1px 2px 5px rgb(206, 110, 206);
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.btn:hover{
+    background-color: rgb(189, 74, 189);
+    color: white;
+    border-radius: 10px;
+}

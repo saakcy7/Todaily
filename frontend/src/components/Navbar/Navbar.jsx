@@ -24,10 +24,10 @@ import { Link } from 'react-router-dom';
           <Link className="nav-link active mx-2 " aria-current="page" href="#">Todo</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link active mx-2 btn-nav" aria-current="page" href="#">SignUp</Link>
+          <Link className="nav-link active mx-2 btn-nav" aria-current="page" to="/signup">SignUp</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link active mx-2 btn-nav" aria-current="page" href="#">SignIn</Link>
+          <Link className="nav-link active mx-2 btn-nav" aria-current="page" to="/signin">SignIn</Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link active mx-2 btn-nav" aria-current="page" href="#">Logout</Link>
