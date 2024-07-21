@@ -11,7 +11,7 @@ const Home = () => {
         <p>Make your day productive by planning your day with us.</p>
         <button className='btn btn-primary'>Get Started</button>
         </div>
-        <img className="img img-primary" src={image}></img>
+        <img className="img img-primary" src={image} alt='/'></img>
     </div>
 
     </>
