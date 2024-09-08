@@ -22,6 +22,8 @@
     border-radius: 10px;
 }
 
+
+
 .todo-card{
     border: 1px solid black;
 }
@@ -34,4 +36,21 @@
 .todo-card-p{
     text-align:justify;
     text-justify:inter-word;
+}
+
+.todo-card-icon{
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.del{
+    color: red;
+}
+
+.card-icon-head{
+   cursor: pointer;
+}
+
+.card-icon-head:hover{
+    box-shadow: rgba(237, 93, 144, 0.35) 5px 5px 15px;
 }
