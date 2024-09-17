@@ -17,6 +17,10 @@ const Todo = () => {
         setInputs({title:"",body:""});
         
     };
+    const del=(id)=>{
+        Array.splice(id,"1");
+        setArray([...Array]);
+    }
 return(
     <>
 <div className="todo">
@@ -36,7 +40,7 @@ return(
             <div className="row">
             {Array&&Array.map((item,index)=>(
             <div className="col-lg-3 col-10 mx-5 my-2">
-                <TodoCards title={item.title} body={item.body}/>
+                <TodoCards title={item.title} body={item.body} id={index} delid={del}/>
             </div>
         ))}</div>
         </div>
