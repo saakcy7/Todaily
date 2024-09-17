@@ -31,6 +31,10 @@ const Todo = () => {
         Array.splice(id,"1");
         setArray([...Array]);
     };
+    const dis=(value)=>{
+        console.log(value);
+        document.getElementById("todo-update").style.display=value;
+    }
 return(
     <>
 <div className="todo">
@@ -51,15 +55,18 @@ return(
             <div className="row">
             {Array&&Array.map((item,index)=>(
             <div className="col-lg-3 col-10 mx-5 my-2">
-                <TodoCards title={item.title} body={item.body} id={index} delid={del}/>
+                <TodoCards title={item.title} body={item.body} id={index} delid={del} display={dis} />
             </div>
         ))}</div>
         </div>
        
         </div>
     </div>
-    <div className="todo-update">
-        <Update/>
+    <div className="todo-update" id="todo-update">
+        <div className="container update"> 
+            <Update display={dis}/>
+        </div>
+       
     </div>
 </>
 );
