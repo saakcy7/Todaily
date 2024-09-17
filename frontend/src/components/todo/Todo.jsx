@@ -1,6 +1,9 @@
 import React from "react";
 import {useState} from "react";
 import TodoCards from "./TodoCards";
+import { ToastContainer,toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Update from "./Update";
 import "./todo.css";
 const Todo = () => {
     const [Inputs,setInputs]= useState({title:"",body:""});
@@ -13,17 +16,25 @@ const Todo = () => {
         setInputs({...Inputs,[name]:value});
     };
     const submit=()=>{
+        if(!Inputs.title||!Inputs.body){
+            toast.error("Please fill all the fields");
+            return;
+        }
         setArray([...Array,Inputs]);
         setInputs({title:"",body:""});
+        toast.success("Your task is added");
+        toast.error("Your task is not saved in database, Please sign up");
+
         
     };
     const del=(id)=>{
         Array.splice(id,"1");
         setArray([...Array]);
-    }
+    };
 return(
     <>
 <div className="todo">
+    <ToastContainer/>
     <div className="todo-main container d-flex justify-content-center align-items-center my-4 flex-column">
         <div className="d-flex flex-column todo-inputs-div w-50 p-1">
         <input type="text" placeholder="TITLE" className="my-2 p-2 todo-inputs" onClick={show} name="title" value={Inputs.title}onChange={change}/>
@@ -46,6 +57,9 @@ return(
         </div>
        
         </div>
+    </div>
+    <div className="todo-update">
+        <Update/>
     </div>
 </>
 );
