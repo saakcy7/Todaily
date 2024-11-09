@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const User = require("../models/user");
 const bcrypt = require("bcryptjs");
+const jwt = require('jsonwebtoken');
 //SIGNIN
 router.post("/register",async(req,res)=>{
     try{
@@ -21,19 +22,25 @@ router.post("/signin",async(req,res)=>{
         const user= await User.findOne({email:req.body.email});
         if(!user)
         {
-            res.status(400).json({message:"Please singup first"});
+            return res.status(400).json({message:"Please singup first"});
         }
         const isPasswordCorrect = bcrypt.compareSync(req.body.password,user.password);
         if(!isPasswordCorrect)
         {
-            res.status(400).json({message:"Password is incorrect"});
+            return res.status(400).json({message:"Password is incorrect"});
         }
+           // Generate a token
+           const token = jwt.sign(
+            { id: user._id, email: user.email },
+            'your_jwt_secret_key', // Replace with your actual secret key
+            { expiresIn: '1h' } // Token expires in 1 hour
+        );
         const {password,...others}=user._doc;
-        res.status(200).json({others});
+        return res.status(200).json({...others,token});
     }catch(error)
     {
         console.log(error);
-        res.status(400).json({message:"User already exists"});
+        return res.status(500).json({message:"Internal Server Error"});
     }
 });
 
