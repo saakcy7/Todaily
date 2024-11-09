@@ -1,57 +1,95 @@
 
+/* Home Section */
 .home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100vh;
 }
 
+/* Home Container */
 .home-container {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
-    height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+    max-width: 800px;
+    width: 100%;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s ease-in-out; /* Smooth transition on hover */
 }
 
+.home-container:hover {
+    transform: scale(1.02); /* Slight scale effect on hover */
+}
+
+/* Headings */
 .home-container h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #2c3e50;
     margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.home-container h1:hover {
+    color: #2980b9; /* Highlight color on hover */
 }
 
 .home-container p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    color: #7f8c8d;
     margin-bottom: 20px;
+    line-height: 1.6;
+    font-weight: 400;
 }
 
-.home-container .btn{
-    background-color: rgb(154, 154, 200);
-    border-radius: 10px 5px;
-    border: 0.2px solid rgb(125, 125, 224);
-    box-shadow:1px 2px 5px rgb(129, 129, 218);
-    width: 35%;
+/* Button Styling */
+.home-container .btn {
+    background-color: #9b59b6;
+    border-radius: 50px;
+    border: none;
+    color: #fff;
+    width: 250px;
     height: 50px;
-    color: rgb(252, 252, 252) !important;
-    font-weight: 500;
-    font-size: 1.5rem;
-    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 25px;
+    box-shadow: 0 6px 15px rgba(155, 89, 182, 0.3);
+    text-transform: uppercase;
 }
-.home-container .btn:hover{
-    background-color: rgb(129, 129, 221);
-    border-radius: 20px 30px;
+
+.home-container .btn:hover {
+    background-color: #8e44ad;
+    transform: translateY(-3px); /* Hover effect with slight translation */
+    box-shadow: 0 12px 20px rgba(155, 89, 182, 0.5);
 }
+
+/* Image Styling */
 .img {
+    width: 600px;
+    height: auto;
+    border-radius: 100px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
     margin-left: auto;
-    margin-right: 50px;
-    display: block;
-    width: 300px; /* Default fixed width */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px 45px;
+    margin-right: auto;
 }
+
+.img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Media Queries for Responsiveness */
 @media (max-width: 1200px) {
     .home-container {
-        width: 70%;
+        width: 75%;
     }
 
     .home-container h1 {
@@ -59,70 +97,54 @@
     }
 
     .home-container p {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
+    }
+
+    .img {
+        width: 250px; /* Slightly smaller image for medium screens */
     }
 }
 
 @media (max-width: 768px) {
     .home-container {
-        width: 90%;
+        width: 85%;
     }
 
     .home-container h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .home-container p {
         font-size: 1rem;
     }
+
+    .img {
+        width: 200px; /* Image size adjustment for tablet */
+    }
 }
+
 @media (max-width: 480px) {
     .home-container {
         width: 100%;
-        padding: 0 10px;
+        padding: 20px;
     }
 
     .home-container h1 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .home-container p {
-        font-size: 0.875rem;
+        font-size: 0.9rem;
     }
 
     .img {
-        width: 100%; /* Full width for mobile screens */
-        height: auto; /* Maintain aspect ratio */
-        margin-right: 0; /* Adjust margin for mobile screens */
+        width: 100%; /* Full-width image on mobile */
+        margin-right: 0;
     }
 
-    .button {
-        padding: 5px 15px; /* Adjust padding for mobile screens */
-        font-size: 0.75rem; /* Adjust font size for mobile screens */
-        width: 100%; /* Full width for mobile screens */
-    }
-}
-
-
-
-@media (max-width: 1200px) {
-    .img {
-        width: 250px; /* Adjust width for medium screens */
-        height: auto; /* Maintain aspect ratio */
-    }
-}
-
-@media (max-width: 768px) {
-    .img {
-        width: 200px; /* Adjust width for tablet screens */
-        height: auto; /* Maintain aspect ratio */
-    }
-}
-
-@media (max-width: 480px) {
-    .img {
-        width: 100%; /* Full width for mobile screens */
-        height: auto; /* Maintain aspect ratio */
-        margin-right: 0; /* Adjust margin for mobile screens */
+    .btn {
+        width: 100%; /* Full-width button on mobile */
+        padding: 12px 0;
+        font-size: 1rem;
     }
 }
